@@ -1,0 +1,10 @@
+.btn {
+  width: 194px;
+  height: 40px;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  font-family: inherit;
+  @include font($fw: 600, $fz: 12px, $lh: 1.33, $ls: 0.09em);
+  text-transform: uppercase;
+  color: $color-second-btn;
+}

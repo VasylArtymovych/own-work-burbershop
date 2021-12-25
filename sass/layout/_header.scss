@@ -1,0 +1,20 @@
+.header {
+  padding-top: 40px;
+  background-color: grey;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+}
+
+// .header__container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+.header-tel {
+  @extend %link;
+  @include font();
+}

@@ -1,0 +1,9 @@
+.nav__list {
+  @extend %list;
+}
+
+.nav__link {
+  @extend %link;
+  @include font();
+  color: $color-fourth-text;
+}
