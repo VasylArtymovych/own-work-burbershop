@@ -1,0 +1,86 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  max-width: 350px;
+  height: 100vh;
+  padding: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms linear, visibility 250ms linear;
+  background-color: $bgr-color-main;
+
+  &__close-btn {
+    display: block;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    fill: $color-second-btn;
+  }
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.mobile-menu-list {
+  @extend %list;
+
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &__link {
+    @extend %link;
+    @include font($fw: 600, $fz: 18px, $lh: 1.39, $ls: 0.1em);
+    color: $color-fourth-text;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $color-accent;
+  }
+}
+
+.mobile-menu-connect {
+  &__tel {
+    display: block;
+    margin-bottom: 24px;
+    @extend %link;
+    @include font($fw: 600, $fz: 18px, $lh: 1.39, $ls: 0.1em);
+    color: $color-fourth-text;
+  }
+  &__tel:hover,
+  &__tel:focus {
+    color: $color-accent;
+  }
+
+  &__btn {
+    min-width: 194px;
+  }
+}
+
+.mobile-menu-scial {
+  @extend %list;
+  &__item {
+    margin-bottom: 24px;
+  }
+  &__link {
+    @extend %link;
+    @include font($fw: 600, $fz: 14px, $lh: 1.35, $ls: 0.2em);
+    color: $color-fourth-text;
+  }
+  &__link::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: black;
+  }
+}
