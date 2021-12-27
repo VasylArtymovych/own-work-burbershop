@@ -1,6 +1,10 @@
+.nav {
+}
+
 .nav__list {
   @extend %list;
   display: flex;
+  align-items: center;
   gap: 24px;
 
   @media screen and(max-width:767px) {
@@ -9,13 +13,16 @@
 }
 
 .nav__link {
+  display: block;
   @extend %link;
-  @include font($fw: 600, $fz: 12px, $lh: 1.33, $ls: 0.1em);
   color: $color-fourth-text;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-
   color: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+  @media screen and(min-width:768px) {
+    padding-top: 14px;
+  }
 }

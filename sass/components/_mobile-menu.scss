@@ -63,6 +63,12 @@
 
   &__btn {
     min-width: 194px;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      color: $color-main-btn;
+    }
   }
 }
 

@@ -2,8 +2,9 @@
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
+  @include font($fw: 600, $fz: 12px, $lh: 1.33, $ls: 0.1em);
   background-color: grey;
-  @media screen and(max-width:767px) {
+  @media screen and(min-width:768px) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -12,11 +13,21 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  @media screen and(min-width:768px) {
+    align-items: flex-start;
+  }
 }
 
 .header-logo {
-  fill: $color-main-title;
+  &__icon {
+    fill: $color-main-title;
+
+    &:hover,
+    &:focus {
+      fill: $color-accent;
+    }
+  }
 }
 
 .header-connect {
@@ -27,6 +38,26 @@
 
   @media screen and(max-width:767px) {
     display: none;
+  }
+
+  @media screen and(min-width:768px) {
+    padding-top: 2px;
+  }
+
+  &__btn {
+    background-color: transparent;
+    color: $color-main-btn;
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+    }
+  }
+  &__tel {
+    color: $color-main-title;
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
   }
 }
 
