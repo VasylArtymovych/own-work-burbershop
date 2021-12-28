@@ -74,19 +74,32 @@
 
 .mobile-menu-scial {
   @extend %list;
+
   &__item {
     margin-bottom: 24px;
+    display: flex;
+    align-items: center;
   }
+
+  &__item::before {
+    content: '';
+    margin-right: 40px;
+    width: 60px;
+    height: 1px;
+    background-color: $color-fourth-text;
+  }
+
+  &__item:last-child::before {
+    content: '';
+    margin-right: 40px;
+    width: 60px;
+    height: 1px;
+    background-color: transparent;
+  }
+
   &__link {
     @extend %link;
     @include font($fw: 600, $fz: 14px, $lh: 1.35, $ls: 0.2em);
     color: $color-fourth-text;
-  }
-  &__link::before {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 1px;
-    background-color: black;
   }
 }

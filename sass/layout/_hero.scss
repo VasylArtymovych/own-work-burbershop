@@ -1,0 +1,13 @@
+.hero-section {
+  padding-top: 208px;
+  padding-bottom: 183px;
+}
+
+.hero-left {
+}
+
+.hero-right {
+  &__after-title {
+    max-width: 306px;
+  }
+}

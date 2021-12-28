@@ -318,7 +318,22 @@ button {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 .nav__list {
@@ -333,6 +348,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    gap: 40px;
+  }
+}
+
 .nav__link {
   display: block;
   color: #303030;
@@ -341,12 +362,6 @@ button {
 
 .nav__link:hover, .nav__link:focus {
   color: #ff6c00;
-}
-
-@media screen and (min-width: 768px) {
-  .nav__link {
-    padding-top: 14px;
-  }
 }
 
 .header {
@@ -379,6 +394,16 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .header__container {
+    align-items: center;
+  }
+}
+
+.header-logo {
+  margin-right: 52px;
+}
+
 .header-logo__icon {
   fill: #ffffff;
 }
@@ -402,7 +427,15 @@ button {
 
 @media screen and (min-width: 768px) {
   .header-connect {
-    padding-top: 2px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-connect {
+    flex-direction: row;
+    padding-top: 0px;
+    gap: 40px;
   }
 }
 
@@ -421,6 +454,12 @@ button {
 
 .header-connect__tel:hover, .header-connect__tel:focus {
   color: #ff6c00;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-connect__tel {
+    order: -1;
+  }
 }
 
 .header-menu-open-btn {
@@ -508,6 +547,24 @@ button {
 
 .mobile-menu-scial__item {
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-scial__item::before {
+  content: '';
+  margin-right: 40px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+
+.mobile-menu-scial__item:last-child::before {
+  content: '';
+  margin-right: 40px;
+  width: 60px;
+  height: 1px;
+  background-color: transparent;
 }
 
 .mobile-menu-scial__link {
@@ -518,11 +575,52 @@ button {
   color: #303030;
 }
 
-.mobile-menu-scial__link::before {
+@media screen and (max-width: 767px) {
+  .social {
+    display: none;
+  }
+}
+
+.hero-section {
+  padding-top: 208px;
+  padding-bottom: 183px;
+}
+
+.hero-right__after-title {
+  max-width: 306px;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.pre-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.pre-title::before {
   content: '';
-  display: block;
+  margin-right: 20px;
   width: 60px;
   height: 1px;
-  background-color: black;
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
+.after-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
 }
 /*# sourceMappingURL=main.css.map */
