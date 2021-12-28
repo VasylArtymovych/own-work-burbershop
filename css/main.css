@@ -365,14 +365,15 @@ button {
 }
 
 .header {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: 0;
   padding-top: 40px;
   padding-bottom: 40px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  background-color: grey;
 }
 
 @media screen and (min-width: 768px) {
@@ -581,9 +582,31 @@ button {
   }
 }
 
-.hero-section {
-  padding-top: 208px;
-  padding-bottom: 183px;
+.hero-container {
+  padding: 0;
+}
+
+.hero-right {
+  background-color: #f7f7f7;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/hero-bgr-img1-mob.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 208px 143px 183px 31px;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 2dpi), (min-resolution: 2dppx) {
+  .hero-right {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/hero-bgr-img1-mob@2x.jpg);
+  }
+}
+
+.hero-right__pre-title {
+  margin-bottom: 20px;
+}
+
+.hero-right__main-title {
+  margin-bottom: 20px;
 }
 
 .hero-right__after-title {
