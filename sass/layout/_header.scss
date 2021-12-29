@@ -2,6 +2,7 @@
   position: absolute;
   width: 100%;
   top: 0;
+  z-index: 5;
   padding-top: 40px;
   padding-bottom: 40px;
   @include font($fw: 600, $fz: 12px, $lh: 1.33, $ls: 0.1em);
@@ -12,11 +13,16 @@
 }
 
 .header__container {
+  width: 100%;
+  padding-right: 31px;
+  padding-left: 31px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   @media screen and(min-width:768px) {
     align-items: flex-start;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   @media screen and(min-width:1200px) {
     align-items: center;
@@ -25,8 +31,15 @@
 
 .header-logo {
   margin-right: 52px;
+  @media screen and(min-width:768px) {
+    margin-right: 60px;
+  }
+
   &__icon {
     fill: $color-main-title;
+    @media screen and(min-width:768px) {
+      fill: $color-second-title;
+    }
 
     &:hover,
     &:focus {
@@ -76,6 +89,8 @@
 }
 
 .header-menu-open-btn {
+  display: block;
+  padding: 0;
   background-color: transparent;
   border: none;
   @media screen and (min-width: 768px) {

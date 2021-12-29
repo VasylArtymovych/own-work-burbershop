@@ -1,6 +1,10 @@
 .main-title {
   @include font($fw: 700, $fz: 48px, $lh: 1.17, $ls: 0.05em);
   color: $color-main-title;
+
+  @media screen and(min-width:1200px) {
+    @include font($fw: 700, $fz: 72px, $lh: 1.18, $ls: 0.05em);
+  }
 }
 
 .pre-title {
@@ -21,4 +25,8 @@
 .after-title {
   @include font($fw: 400, $fz: 16px, $lh: 1.6, $ls: 0.02em);
   color: $color-third-text;
+
+  @media screen and(min-width:1200px) {
+    @include font($fw: 400, $fz: 18px, $lh: 1.67, $ls: 0.02em);
+  }
 }

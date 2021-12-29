@@ -1,9 +1,16 @@
 .social {
+  @extend %list;
   @media screen and(max-width:767px) {
     display: none;
   }
 }
-.social__item {
+.social__item:hover .social__link,
+.social__item:focus .social__link {
+  color: $color-accent;
 }
+
 .social__link {
+  @extend %link;
+  @include font($fw: 600, $fz: 11px, $lh: 1.36, $ls: 0.2em);
+  color: $color-second-title;
 }
