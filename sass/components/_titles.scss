@@ -7,6 +7,11 @@
   }
 }
 
+.second-title {
+  @include font($fw: 700, $fz: 28px, $lh: 1.18, $ls: 0.05em);
+  color: $color-second-title;
+}
+
 .pre-title {
   display: flex;
   align-items: center;
@@ -18,7 +23,7 @@
     margin-right: 20px;
     width: 60px;
     height: 1px;
-    background-color: $color-second-text;
+    background-color: currentColor;
   }
 }
 

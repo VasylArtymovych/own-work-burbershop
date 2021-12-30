@@ -1,0 +1,43 @@
+.about {
+}
+.about-container {
+  @media screen and(min-width:768px) {
+    display: flex;
+    gap: 30px;
+  }
+}
+.about-list {
+  @extend %list;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 30px;
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+  &__item {
+  }
+}
+
+.about-wrap {
+  @media screen and(min-width:768px) {
+    width: 50%;
+  }
+}
+.about__pre-title {
+  margin-bottom: 20px;
+  color: $color-second-title;
+}
+.about__second-title {
+  margin-bottom: 30px;
+}
+.about__text {
+  margin-bottom: 20px;
+  @include font($fw: 400, $fz: 16px, $lh: 1.62, $ls: 0.02em);
+  color: $color-main-text;
+}
+.about__second-text {
+  margin-bottom: 40px;
+  @include font($fw: 400, $fz: 14px, $lh: 1.62, $ls: 0.02em);
+  color: $color-main-text;
+}
