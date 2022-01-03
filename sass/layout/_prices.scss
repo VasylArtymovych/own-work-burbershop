@@ -1,0 +1,83 @@
+.prices {
+  background-color: #111319;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/prices/prices-bgr-img-mob.png);
+  // @media (min-device-pixel-ratio: 2),
+  //   (-webkit-min-device-pixel-ratio: 2),
+  //   (min-resolution: 2dpi),
+  //   (min-resolution: 2dppx) {
+  //   background-image: url(../images/prices/prices-bgr-img-mob@2x.jpg);
+  // }
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.prices__container {
+}
+
+.prices__pre-title {
+  margin-bottom: 20px;
+}
+
+.prices__second-title {
+  @include font($fw: 700, $fz: 42px, $lh: 1.17, $ls: 0.05em);
+  color: $color-main-title;
+  margin-bottom: 44px;
+}
+.prices__wrap {
+  padding: 30px;
+  margin-bottom: 62px;
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list {
+  @extend %list;
+}
+.prices-list--first {
+  margin-bottom: 20px;
+}
+
+.prices-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &::after {
+    content: '';
+    height: 1px;
+    flex-grow: 1;
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: rgba(157, 164, 189, 0.12);
+  }
+}
+
+.prices-list__text {
+  @include font($fw: 400, $fz: 14px, $lh: 2.14, $ls: 0.02em);
+  color: $color-third-text;
+}
+
+.prices-list__text--count {
+  order: 1;
+  @include font($fw: 400, $fz: 14px, $lh: 2.14, $ls: 0.02em);
+  color: $color-third-text;
+}
+
+.prices-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  color: $color-main-btn;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    color: $color-main-btn;
+  }
+}
