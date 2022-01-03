@@ -1,0 +1,75 @@
+.reasons-container {
+  @media screen and(min-width:1200px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.reasons-right {
+  @media screen and(min-width:768px) {
+    max-width: 500px;
+  }
+  &__pre-title {
+    margin-bottom: 20px;
+    color: $color-second-title;
+  }
+
+  &__second-title {
+    margin-bottom: 20px;
+    @include font($fw: 700, $fz: 42px, $lh: 1.17, $ls: 0.03em);
+  }
+
+  &__after-title {
+    margin-bottom: 44px;
+    @include font($fw: 400, $fz: 18px, $lh: 1.67, $ls: 0.02em);
+    color: $color-main-text;
+  }
+}
+
+.reasons-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and(min-width:768px) {
+    max-width: 450px;
+    margin-left: auto;
+  }
+  @media screen and(min-width:1200px) {
+    margin-left: 0;
+    order: -1;
+  }
+
+  &__item {
+    width: calc(100% / 2 - 15px);
+    padding: 20px 35px;
+    background-color: #f7f7f7;
+    @media screen and(min-width:768px) {
+    }
+  }
+  &__item:nth-child(2n + 1) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  &__item:nth-child(2n) {
+    margin-top: 30px;
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    @include font($fw: 700, $fz: 42px, $lh: 1.35, $ls: 0.05em);
+    color: $color-fourth-text;
+  }
+  &__number::after {
+    content: '+';
+    padding-top: 8px;
+    margin-bottom: 6px;
+    @include font($fw: 600, $fz: 16px, $lh: 1.37, $ls: 0.05em);
+    color: $color-accent;
+  }
+
+  &__text {
+    @include font($fw: 600, $fz: 11px, $lh: 1.36);
+    text-align: center;
+    color: $color-fourth-text;
+  }
+}
