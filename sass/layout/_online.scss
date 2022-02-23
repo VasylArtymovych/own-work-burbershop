@@ -1,0 +1,76 @@
+.online {
+  background-color: #191c26;
+}
+.form-title {
+  margin-bottom: 44px;
+  @include font($fw: 700, $fz: 42px, $lh: 1.17, $ls: 0.05em);
+  text-align: center;
+  color: $color-main-title;
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
+}
+.online-form {
+  display: flex;
+  flex-direction: column;
+}
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: -30px;
+  }
+}
+.online-form__input,
+.online-form__text {
+  @include font($fw: 600, $fz: 11px, $lh: 1.36, $ls: 0.1em);
+  color: $color-second-text;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-second-text;
+  outline: none;
+}
+.online-form__input {
+  padding-bottom: 8px;
+  margin-bottom: 44px;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    margin-right: 30px;
+  }
+}
+
+.online-form__input::placeholder,
+.online-form__text::placeholder {
+  @include font($fw: 600, $fz: 11px, $lh: 1.36, $ls: 0.1em);
+  color: $color-second-text;
+}
+
+.online-form__input:focus,
+.online-form__text:focus {
+  border-color: $color-main-title;
+}
+.online-form__input:focus::placeholder,
+.online-form__text:focus::placeholder {
+  color: $color-main-title;
+}
+
+.online-form__text {
+  margin-bottom: 44px;
+  height: 76px;
+  resize: none;
+}
+.online-form__btn {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+  color: $color-main-btn;
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
+}
+.online-form__btn:hover,
+.online-form__btn:focus {
+  background-color: $color-accent;
+}

@@ -1,60 +1,36 @@
-.online {
+.contacts {
+  padding: 84px 0px 84px 0px;
   background-color: #191c26;
 }
-.form-title {
-  margin-bottom: 44px;
-  @include font($fw: 700, $fz: 42px, $lh: 1.17, $ls: 0.05em);
+.contact-container {
+}
+
+.contacts-title {
+  margin-bottom: 40px;
   text-align: center;
-  color: $color-main-title;
-}
-.online-form {
-  display: flex;
-  flex-direction: column;
-}
-.input-wrap {
-  display: flex;
-  flex-direction: column;
-}
-.online-form__input,
-.online-form__text {
-  @include font($fw: 600, $fz: 11px, $lh: 1.36, $ls: 0.1em);
-  color: $color-second-text;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid $color-second-text;
-  outline: none;
-}
-.online-form__input {
-  padding-bottom: 8px;
-  margin-bottom: 44px;
-}
-.online-form__input::placeholder,
-.online-form__text::placeholder {
-  @include font($fw: 600, $fz: 11px, $lh: 1.36, $ls: 0.1em);
-  color: $color-second-text;
+  @include font($fw: 700, $fz: 42px, $lh: 1.17, $ls: 0.05em);
+  color: #ffffff;
 }
 
-.online-form__input:focus,
-.online-form__text:focus {
-  border-color: $color-main-title;
+.contact-list {
+  list-style: none;
+  margin-bottom: 44px;
 }
-.online-form__input:focus::placeholder,
-.online-form__text:focus::placeholder {
-  color: $color-main-title;
+.contact-list__item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
-.online-form__text {
-  margin-bottom: 44px;
-  height: 76px;
-  resize: none;
+.contact-list__link {
+  @include font($fw: 400, $fz: 18px, $lh: 1.67, $ls: 0.02em);
+  color: #9da4bd;
 }
-.online-form__btn {
-  margin-right: auto;
-  margin-left: auto;
-  background-color: transparent;
-  color: $color-main-btn;
+.contacts-bottom-title {
+  margin-bottom: 20px;
+  @include font($fw: 400, $fz: 11px, $lh: 1.36, $ls: 0.1em);
+  text-transform: uppercase;
+  color: #ffffff;
 }
-.online-form__btn:hover,
-.online-form__btn:focus {
-  background-color: $color-accent;
+.contacts-bottom-text {
+  @include font($fw: 400, $fz: 18px, $lh: 1.67, $ls: 0.02em);
+  color: #9da4bd;
 }

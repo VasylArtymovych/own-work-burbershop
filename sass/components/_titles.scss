@@ -15,7 +15,7 @@
 .pre-title {
   display: flex;
   align-items: center;
-  @include font($fw: 600, $fz: 11px, $lh: 1.36, $ls: 0.1em);
+  @include font($fw: 600, $fz: 8px, $lh: 1.36, $ls: 0.01em);
   color: $color-second-text;
 
   &::before {

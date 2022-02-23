@@ -310,8 +310,8 @@ img {
 }
 
 .container {
-  padding-right: 31px;
-  padding-left: 31px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin: 0 auto;
 }
 
@@ -645,9 +645,9 @@ img {
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 8px;
   line-height: 1.36;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
   color: rgba(157, 164, 189, 0.6);
 }
 
@@ -994,7 +994,7 @@ img {
 
 .prices-list__text {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 2.14;
   letter-spacing: 0.02em;
   color: #9da4bd;
@@ -1152,6 +1152,12 @@ img {
   color: #ffffff;
 }
 
+@media screen and (min-width: 768px) {
+  .form-title {
+    text-align: start;
+  }
+}
+
 .online-form {
   display: flex;
   flex-direction: column;
@@ -1160,6 +1166,14 @@ img {
 .input-wrap {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .input-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: -30px;
+  }
 }
 
 .online-form__input,
@@ -1178,6 +1192,13 @@ img {
 .online-form__input {
   padding-bottom: 8px;
   margin-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .online-form__input {
+    width: 50%;
+    margin-right: 30px;
+  }
 }
 
 .online-form__input::placeholder,
@@ -1212,8 +1233,64 @@ img {
   color: #ffffff;
 }
 
+@media screen and (min-width: 768px) {
+  .online-form__btn {
+    margin-left: 0;
+  }
+}
+
 .online-form__btn:hover,
 .online-form__btn:focus {
   background-color: #ff6c00;
+}
+
+.contacts {
+  padding: 84px 0px 84px 0px;
+  background-color: #191c26;
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.contact-list {
+  list-style: none;
+  margin-bottom: 44px;
+}
+
+.contact-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contact-list__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-bottom-title {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.contacts-bottom-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
 }
 /*# sourceMappingURL=main.css.map */

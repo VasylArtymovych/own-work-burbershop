@@ -86,7 +86,7 @@
 }
 
 .prices-list__text {
-  @include font($fw: 400, $fz: 14px, $lh: 2.14, $ls: 0.02em);
+  @include font($fw: 400, $fz: 12px, $lh: 2.14, $ls: 0.02em);
   color: $color-third-text;
   @media screen and(min-width:768px) {
     @include font($fw: 400, $fz: 18px, $lh: 1.67, $ls: 0.02em);
